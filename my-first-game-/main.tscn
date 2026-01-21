@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://psuusljqexty"]
+
+[ext_resource type="Texture2D" uid="uid://euop6klcichq" path="res://assests of game/download (2).jpg" id="1_ig7tw"]
+
+[node name="Game manager" type="Node2D"]
+
+[node name="Download(2)" type="Sprite2D" parent="."]
+position = Vector2(200, 308)
+scale = Vector2(0.54347825, 0.4464832)
+texture = ExtResource("1_ig7tw")
