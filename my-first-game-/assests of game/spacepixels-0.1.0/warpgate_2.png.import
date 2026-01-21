@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pb1hkllqy21l"
-path="res://.godot/imported/Gemini_Generated_Image_sy6uqhsy6uqhsy6u.png-e5b811658d09cd444b62a44e8e3c1d67.ctex"
+uid="uid://n2lgeldrxucv"
+path="res://.godot/imported/warpgate_2.png-2146127a989a2516f5540a0eb014acd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests of game/Gemini_Generated_Image_sy6uqhsy6uqhsy6u.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_sy6uqhsy6uqhsy6u.png-e5b811658d09cd444b62a44e8e3c1d67.ctex"]
+source_file="res://assests of game/spacepixels-0.1.0/warpgate_2.png"
+dest_files=["res://.godot/imported/warpgate_2.png-2146127a989a2516f5540a0eb014acd2.ctex"]
 
 [params]
 

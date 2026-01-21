@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6mw1nkbq1m3"]
+
+[ext_resource type="Texture2D" uid="uid://ccbje4ca1pqst" path="res://assests of game/spacepixels-0.1.0/pixel_ship_red.png" id="1_4flbx"]
+
+[node name="player" type="Node2D"]
+
+[node name="PixelShipRed" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4flbx")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc4hexlqemqx"]
+
+[ext_resource type="Texture2D" uid="uid://du1w2cu3d76at" path="res://assests of game/spacepixels-0.1.0/pixel_laser_green.png" id="1_ctmrm"]
+
+[node name="fires" type="Node2D"]
+
+[node name="PixelLaserGreen" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5888889)
+texture = ExtResource("1_ctmrm")
