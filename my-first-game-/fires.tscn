@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc4hexlqemqx"]
+[gd_scene load_steps=3 format=3 uid="uid://bc4hexlqemqx"]
 
 [ext_resource type="Texture2D" uid="uid://du1w2cu3d76at" path="res://assests of game/spacepixels-0.1.0/pixel_laser_green.png" id="1_ctmrm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctmrm"]
+size = Vector2(10, 29.702969)
 
 [node name="fires" type="Node2D"]
 
 [node name="PixelLaserGreen" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5888889)
+scale = Vector2(0.6, 0.707)
 texture = ExtResource("1_ctmrm")
+
+[node name="Area2D" type="Area2D" parent="PixelLaserGreen"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PixelLaserGreen/Area2D"]
+position = Vector2(0, -2.1216402)
+shape = SubResource("RectangleShape2D_ctmrm")
