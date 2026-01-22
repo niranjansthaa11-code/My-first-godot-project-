@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bamsgqb6tc4k"]
+[gd_scene load_steps=3 format=3 uid="uid://bamsgqb6tc4k"]
 
 [ext_resource type="Texture2D" uid="uid://dy81ffqghhpkv" path="res://enemies/pixel_ship.png" id="1_gu34h"]
+[ext_resource type="Script" uid="uid://cei1f6twb4h4e" path="res://enemies/enemies.gd" id="1_v8hav"]
 
-[node name="enemies" type="Node2D"]
+[node name="Area2D of anime" type="Area2D"]
+script = ExtResource("1_v8hav")
 
-[node name="enime ship" type="Sprite2D" parent="."]
+[node name="PixelShip" type="Sprite2D" parent="."]
 rotation = 3.1415927
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_gu34h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -17, -20, -8, -10, -8, -10, 2, -5, 3, -5, 17, 5, 18, 5, 3, 11, 3, 10, -8, 20, -8, 20, -17, 5, -18, 4, -23, -5, -23, -6, -18)

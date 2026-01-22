@@ -3,7 +3,7 @@ extends Node2D
 var direction:int = 0
 var speed:int =500
 var bullet_fire_scence = preload("res://fires_red.tscn")
-var shoot_time:=1
+var shoot_time:=0.2
 var shoot_count=0
 
 
@@ -19,7 +19,7 @@ func _process(delta):
 		shoot_count=0
 		var bullet_instance=bullet_fire_scence.instantiate()
 		bullet_instance.position.x=position.x
-		bullet_instance.position.y=position.y-50
+		bullet_instance.position.y=position.y-30
 		get_parent().get_node("fires").add_child(bullet_instance)
 		
 		
