@@ -2,7 +2,7 @@ extends Node2D
 
 var direction:int = 0
 var speed:int =500
-var bullet_fire = preload("res://fires_red.tscn")
+var bullet_fire_scence = preload("res://fires_red.tscn")
 var shoot_time:=1
 var shoot_count=0
 
@@ -14,7 +14,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	shoot_count+=delta
 	if Input.is_action_pressed("shoot") and shoot_count>shoot_time:
+		shoot_count=0
+		var bullet_instance=bullet_fire_scence.instantiate()
+		bullet_instance.position.x=position.x
+		bullet_instance.position.y=position.y-50
+		get_parent().get_node("fires").add_child(bullet_instance)
+		
 		
 		
 	if Input.is_action_pressed("move_element_left"):

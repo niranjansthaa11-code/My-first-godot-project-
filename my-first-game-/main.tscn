@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://psuusljqexty"]
+[gd_scene load_steps=7 format=3 uid="uid://psuusljqexty"]
 
 [ext_resource type="Texture2D" uid="uid://euop6klcichq" path="res://assests of game/download (2).jpg" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bv6mw1nkbq1m3" path="res://player/player.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b063kxuusdi71" path="res://assests of game/spacepixels-0.1.0/horizontal_bar_grey.png" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://bvdgcj8gbqqlu" path="res://fires.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bc4hexlqemqx" path="res://fires.tscn" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(408, 5)
@@ -28,3 +30,8 @@ texture = ExtResource("3_h2yge")
 
 [node name="player" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(192, 536)
+
+[node name="fires" type="Node2D" parent="."]
+script = ExtResource("4_1bvp3")
+
+[node name="fires" parent="fires" instance=ExtResource("5_lquwl")]
