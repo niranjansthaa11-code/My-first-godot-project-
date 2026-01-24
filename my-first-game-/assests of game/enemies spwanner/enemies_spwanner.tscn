@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bk4j665xv8nrp"]
+[gd_scene load_steps=2 format=3 uid="uid://bk4j665xv8nrp"]
+
+[ext_resource type="Script" uid="uid://wtg1hfmoaear" path="res://assests of game/enemies spwanner/enemies_spwanner.gd" id="1_5ws78"]
 
 [node name="enemies spwanner" type="Node"]
+script = ExtResource("1_5ws78")

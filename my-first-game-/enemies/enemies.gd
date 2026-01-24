@@ -12,3 +12,11 @@ func _ready():
 func _process(delta) :
 	position.y+=speed*delta
 	
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.name=="fires_area":
+		area.get_parent().queue_free()  
+		queue_free() 
+	
+	pass # Replace with function body.
