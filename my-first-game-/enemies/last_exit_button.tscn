@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://q6y57ved3el5"]
+
+[ext_resource type="Script" uid="uid://daotbyvumfgyy" path="res://menu/menu.gd" id="1_nwjnc"]
+[ext_resource type="Texture2D" uid="uid://l1qqa7xw7415" path="res://assests of game/Screenshot 2026-01-24 105220.png" id="2_db0v5"]
+[ext_resource type="FontFile" uid="uid://e6px1yroegqq" path="res://assests of game/Merchant Copy.ttf" id="3_xx2hv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv2di"]
+texture = ExtResource("2_db0v5")
+modulate_color = Color(0.34557152, 0.34557167, 0.3455716, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxa0q"]
+bg_color = Color(0.978008, 0.9528547, 0.99125713, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2lhx"]
+bg_color = Color(0.48803586, 0.17193791, 0.09708352, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4t64p"]
+bg_color = Color(0.5379934, 0.06765488, 0.20410454, 1)
+
+[node name="last_exit button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwjnc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pv2di")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -33.0
+offset_right = 57.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(7.181221e-06, 1.0338701e-05, 1.7118518e-06, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_xx2hv")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_dxa0q")
+text = "Space shooter"
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.11059142, 0.06998978, 0.029934656, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o2lhx")
+text = "Restart game"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.016800098, 0.008692576, 0.0059470385, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4t64p")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o2lhx")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48000002
+anchor_top = 0.388
+anchor_right = 0.48000002
+anchor_bottom = 0.388
+offset_left = -80.0
+offset_top = -8.800003
+offset_right = 86.0
+offset_bottom = 9.199997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xx2hv")
+theme_override_font_sizes/font_size = 26
+text = " MISSION FAILED !!"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

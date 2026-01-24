@@ -1,23 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://psuusljqexty"]
+[gd_scene load_steps=10 format=3 uid="uid://psuusljqexty"]
 
+[ext_resource type="Script" uid="uid://da7h7qa06xhff" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://euop6klcichq" path="res://assests of game/download (2).jpg" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bv6mw1nkbq1m3" path="res://player/player.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b063kxuusdi71" path="res://assests of game/spacepixels-0.1.0/horizontal_bar_grey.png" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://bwaw80qgmld1g" path="res://download(2).gd" id="3_kek77"]
+[ext_resource type="Script" uid="uid://cvda78wx5sk7k" path="res://the_death_boundary.gd" id="4_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bk4j665xv8nrp" path="res://assests of game/enemies spwanner/enemies_spwanner.tscn" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://crc7j0qigvi1x" path="res://enemies/menu.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://duacpe35gw34s" path="res://enemies/exit.tscn" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(408, 5)
 
 [node name="Game manager" type="Node2D"]
+script = ExtResource("1_5vw27")
 
 [node name="Download(2)" type="Sprite2D" parent="."]
+modulate = Color(0.5037054, 0.5037054, 0.5037054, 1)
 position = Vector2(200, 296)
 scale = Vector2(0.54347825, 0.4648318)
 texture = ExtResource("1_ig7tw")
+script = ExtResource("3_kek77")
 
 [node name="the_death_boundary" type="Area2D" parent="."]
 position = Vector2(192, 496)
+script = ExtResource("4_4c57u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="the_death_boundary"]
 position = Vector2(4, 0)
@@ -37,8 +44,8 @@ position = Vector2(192, 536)
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Control" parent="." instance=ExtResource("5_lquwl")]
-offset_left = 184.0
-offset_top = 664.0
-offset_right = 184.0
-offset_bottom = 664.0
+[node name="exit control button" parent="." instance=ExtResource("5_lquwl")]
+offset_left = 344.0
+offset_top = 24.0
+offset_right = 368.0
+offset_bottom = 24.0
