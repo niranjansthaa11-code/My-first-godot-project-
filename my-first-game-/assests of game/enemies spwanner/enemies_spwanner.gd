@@ -20,9 +20,10 @@ func _create_enemy():
 func _end(area:Node):
 	
 	if area is Enemy:
-		get_tree().set_pause(true) 
+		get_tree().set_pause(true)
+		
 		get_tree().change_scene_to_file("res://enemies/last_exit_button.tscn")
-	 
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

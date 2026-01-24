@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm2lusuy0xmkn"
+path="res://.godot/imported/Frodo Nooo! - Sound Effect.mp3-421bd9fb5403517da534d072314dca6d.mp3str"
+
+[deps]
+
+source_file="res://assests of game/Frodo Nooo! - Sound Effect.mp3"
+dest_files=["res://.godot/imported/Frodo Nooo! - Sound Effect.mp3-421bd9fb5403517da534d072314dca6d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -92,10 +92,10 @@ text = "Exit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 54.0
-offset_top = 380.0
-offset_right = 367.0
-offset_bottom = 424.0
+offset_left = 51.0
+offset_top = 393.0
+offset_right = 364.0
+offset_bottom = 437.0
 theme_override_fonts/font = ExtResource("2_pv2di")
 theme_override_font_sizes/font_size = 26
 text = "     Press space for firing 

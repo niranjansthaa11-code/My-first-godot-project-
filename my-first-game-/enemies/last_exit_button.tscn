@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://q6y57ved3el5"]
+[gd_scene load_steps=9 format=3 uid="uid://q6y57ved3el5"]
 
-[ext_resource type="Script" uid="uid://daotbyvumfgyy" path="res://menu/menu.gd" id="1_nwjnc"]
+[ext_resource type="Script" uid="uid://dklvr2w0n6524" path="res://enemies/last_exit_button.gd" id="1_db0v5"]
 [ext_resource type="Texture2D" uid="uid://l1qqa7xw7415" path="res://assests of game/Screenshot 2026-01-24 105220.png" id="2_db0v5"]
 [ext_resource type="FontFile" uid="uid://e6px1yroegqq" path="res://assests of game/Merchant Copy.ttf" id="3_xx2hv"]
+[ext_resource type="AudioStream" uid="uid://cm2lusuy0xmkn" path="res://assests of game/Frodo Nooo! - Sound Effect.mp3" id="4_db0v5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv2di"]
 texture = ExtResource("2_db0v5")
@@ -24,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nwjnc")
+script = ExtResource("1_db0v5")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -106,6 +107,9 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xx2hv")
 theme_override_font_sizes/font_size = 26
 text = " MISSION FAILED !!"
+
+[node name="MissionFailSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_db0v5")
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
