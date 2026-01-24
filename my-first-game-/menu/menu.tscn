@@ -101,5 +101,17 @@ theme_override_font_sizes/font_size = 26
 text = "     Press space for firing 
 press left and right for movement "
 
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 230.0
+offset_right = 232.0
+offset_bottom = 261.0
+item_count = 2
+popup/item_0/text = "High"
+popup/item_0/id = 0
+popup/item_1/text = "low"
+popup/item_1/id = 1
+
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

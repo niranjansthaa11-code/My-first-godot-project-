@@ -1,7 +1,7 @@
 class_name Enemy
 extends Area2D
 
-var speed:int = 90
+var speed:int = 200
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
