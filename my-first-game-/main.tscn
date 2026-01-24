@@ -38,8 +38,6 @@ texture = ExtResource("3_h2yge")
 [node name="player" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(192, 536)
 
-[node name="fires" type="Node" parent="."]
-
 [node name="enemies spwanner" parent="." instance=ExtResource("4_lquwl")]
 
 [node name="Enemies" type="Node" parent="."]
@@ -49,3 +47,5 @@ offset_left = 344.0
 offset_top = 24.0
 offset_right = 368.0
 offset_bottom = 24.0
+
+[node name="fires" type="Node" parent="."]

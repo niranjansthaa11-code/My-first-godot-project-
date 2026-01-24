@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg5mgbi7dsi3l"]
+
+[ext_resource type="Script" uid="uid://r10e3plkee4c" path="res://sound.gd" id="1_7ywqe"]
+[ext_resource type="AudioStream" uid="uid://ce0soqwan64px" path="res://sounds/FreeSFX/GameSFX/Impact/Retro Impact LoFi 09.wav" id="2_tdv2v"]
+
+[node name="blast_sound" type="Node2D"]
+script = ExtResource("1_7ywqe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tdv2v")
+volume_db = -10.0

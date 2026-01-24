@@ -15,8 +15,12 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	var sound_doit=preload("res://do_it.tscn")
+	var sound_scence=sound_doit.instantiate()
+	get_parent().add_child(sound_scence)
+	
 	get_tree().change_scene_to_file("res://main.tscn")
-		
+	
 	
 	
 	pass # Replace with function body.
