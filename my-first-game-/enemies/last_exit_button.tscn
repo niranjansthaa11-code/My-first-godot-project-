@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://q6y57ved3el5"]
+[gd_scene load_steps=10 format=3 uid="uid://q6y57ved3el5"]
 
 [ext_resource type="Script" uid="uid://dklvr2w0n6524" path="res://enemies/last_exit_button.gd" id="1_db0v5"]
 [ext_resource type="Texture2D" uid="uid://l1qqa7xw7415" path="res://assests of game/Screenshot 2026-01-24 105220.png" id="2_db0v5"]
@@ -13,10 +13,13 @@ modulate_color = Color(0.34557152, 0.34557167, 0.3455716, 1)
 bg_color = Color(0.978008, 0.9528547, 0.99125713, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2lhx"]
-bg_color = Color(0.48803586, 0.17193791, 0.09708352, 1)
+bg_color = Color(0.503576, 0.1409752, 0.15857187, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4t64p"]
 bg_color = Color(0.5379934, 0.06765488, 0.20410454, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db0v5"]
+bg_color = Color(0.51152074, 0.3798268, 0, 1)
 
 [node name="last_exit button" type="Control"]
 layout_mode = 3
@@ -91,6 +94,22 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_o2lhx")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o2lhx")
 text = "Exit"
 
+[node name="main_menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_db0v5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_o2lhx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o2lhx")
+text = "Main Menu"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -113,3 +132,4 @@ stream = ExtResource("4_db0v5")
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu" to="." method="_on_start_2_pressed"]

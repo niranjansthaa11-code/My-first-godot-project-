@@ -9,7 +9,7 @@ func _ready() -> void:
 	get_parent().get_node("the_death_boundary").area_entered.connect(_end)
 	var timer =Timer.new()
 	add_child(timer) 
-	timer.wait_time=1
+	timer.wait_time=Global.spwan_time
 	timer.timeout.connect(_create_enemy)
 	timer.start() 
 	
