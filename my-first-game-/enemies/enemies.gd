@@ -23,9 +23,11 @@ func _on_area_entered(area: Area2D) -> void:
 		sound_scence.global_position = global_position # it just make sound produc in a 3d like way 
 		area.get_parent().queue_free()  
 		Global.enemies_killed +=1
+		
 		var explosion = preload("res://explosion.tscn").instantiate()
-		get_parent().add_child(explosion)
-		explosion.global_position = global_position
+		get_parent().add_child(explosion)# this make it explosion scence in main screen
+		explosion.global_position = global_position ## adds where the ememy gets destroyed 
+		
 
 		queue_free() 
 		
