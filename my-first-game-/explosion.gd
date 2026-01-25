@@ -1,10 +1,11 @@
-extends Node
-var spwan_time =1
-var enemies_killed:int=0
+extends AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	play("blast")
+	await animation_finished
+	queue_free()
 	pass # Replace with function body.
 
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://crc88fld3rltb"]
+
+[ext_resource type="Script" uid="uid://cx71h7nf6nhfs" path="res://counter.gd" id="1_wcxvy"]
+
+[node name="Counter" type="Node"]
+script = ExtResource("1_wcxvy")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -37.0
+offset_right = 63.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2

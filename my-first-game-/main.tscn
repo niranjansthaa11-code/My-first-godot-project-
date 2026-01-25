@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://psuusljqexty"]
+[gd_scene load_steps=11 format=3 uid="uid://psuusljqexty"]
 
 [ext_resource type="Script" uid="uid://da7h7qa06xhff" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://euop6klcichq" path="res://assests of game/download (2).jpg" id="1_ig7tw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cvda78wx5sk7k" path="res://the_death_boundary.gd" id="4_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bk4j665xv8nrp" path="res://assests of game/enemies spwanner/enemies_spwanner.tscn" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://duacpe35gw34s" path="res://enemies/exit.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://crc88fld3rltb" path="res://counter.tscn" id="9_kek77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(408, 5)
@@ -49,3 +50,5 @@ offset_right = 368.0
 offset_bottom = 24.0
 
 [node name="fires" type="Node" parent="."]
+
+[node name="Counter" parent="." instance=ExtResource("9_kek77")]

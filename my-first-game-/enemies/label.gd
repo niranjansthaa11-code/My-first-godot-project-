@@ -1,6 +1,4 @@
-extends Node
-var spwan_time =1
-var enemies_killed:int=0
+extends Label
 
 
 # Called when the node enters the scene tree for the first time.

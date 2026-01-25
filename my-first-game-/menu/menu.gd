@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Global.enemies_killed=0
 	var sound_doit=preload("res://do_it.tscn")
 	var sound_scence=sound_doit.instantiate()
 	get_parent().add_child(sound_scence)

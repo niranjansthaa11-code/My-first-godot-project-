@@ -20,10 +20,13 @@ func _on_area_entered(area: Area2D) -> void:
 		var sound_scence=sound_vfx.instantiate()
 		
 		get_parent().add_child(sound_scence)
-		sound_scence.global_position = global_position
-
-
+		sound_scence.global_position = global_position # it just make sound produc in a 3d like way 
 		area.get_parent().queue_free()  
+		Global.enemies_killed +=1
+		var explosion = preload("res://explosion.tscn").instantiate()
+		get_parent().add_child(explosion)
+		explosion.global_position = global_position
+
 		queue_free() 
 		
 		
